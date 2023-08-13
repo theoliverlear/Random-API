@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html"
+      dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number API</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+    <!--IMPORTANT: The Random API is a place where you can get random sets of
+    data and combine the randomness for your own purposes. The Random API may
+    be anything -- a base for a random number generator, testing, encryption,
+    dummy data, or just for fun. The Random API a simple tool to help you
+    build complex programs. -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <h4>Random Generator</h4>
+                <h4>API</h4>
+                <h4>Documentation</h4>
+            </li>
+        </ul>
+    </nav>
+    <h1>Random Number</h1>
+    <p>Random number is: <span id="gen-num" th:text="${number}">...</span></p>
+    <div id="copy-button"><h3>Copy to Clipboard</h3></div>
+
+    <div id="min-max-section">
+        <p>Min: </p>
+        <span th:text="${min}">...</span>
+        <p>Max: </p>
+        <span th:text="${max}">...</span>
+    </div>
+    <p><a href="/random">Generate again</a></p>
+    <form method="post" action="/formulate">
+        <label for="min">Minimum Number</label>
+        <input type="number" id="min" name="min" value="0">
+        <label for="max">Maximum Number</label>
+        <input type="number" id="max" name="max" value="100">
+        <input type="submit" value="Set Range">
+    </form>
+    <script src="../static/script.js" th:src="@{/script.js}" defer></script>
+</body>
+</html>

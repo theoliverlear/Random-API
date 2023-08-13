@@ -1,0 +1,72 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Roboto, sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    padding: 0;
+    margin: 7.5vw 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 7vh;
+    background-color: #7e7474;
+    position: fixed;
+
+}
+h1 {
+    font-size: 3.5vw;
+    font-weight: 450;
+    line-height: 1.2;
+    color: #212529;
+    text-align: center;
+}
+h4 {
+    font-size: 2vw;
+    font-weight: 450;
+    line-height: 1.2;
+    color: #212529;
+    text-align: center;
+}
+p {
+    font-size: 2vw;
+    color: #212529;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+}
+#min-max-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vw;
+}
+
+#copy-button {
+    width: 10vw;
+    height: 10vh;
+    font-size: 2vw;
+    font-weight: 450;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+}
+#copy-button h3 {
+    margin: 0;
+    padding: 0;
+
+}
