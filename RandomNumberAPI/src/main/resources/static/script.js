@@ -1,3 +1,4 @@
+//--------------------------Copy-to-Clipboard-Function------------------------
 const copyButton = document.getElementById('copy-button');
 let copyNum = document.getElementById('gen-num');
 async function copyToClipboard() {

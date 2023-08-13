@@ -17,22 +17,27 @@
         <ul>
             <li>
                 <h4>Random Generator</h4>
+            </li>
+            <li>
                 <h4>API</h4>
+            </li>
+            <li>
                 <h4>Documentation</h4>
             </li>
         </ul>
     </nav>
-    <h1>Random Number</h1>
-    <p>Random number is: <span id="gen-num" th:text="${number}">...</span></p>
-    <div id="copy-button"><h3>Copy to Clipboard</h3></div>
-
+    <section id="num-display-section">
+        <h1 class="num-display">Random Number</h1>
+        <p class="num-display">Random number is: <span id="gen-num" th:text="${number}">...</span></p>
+        <div class="num-display" id="copy-button"><h3>Copy to Clipboard</h3></div>
+    </section>
     <div id="min-max-section">
-        <p>Min: </p>
-        <span th:text="${min}">...</span>
-        <p>Max: </p>
-        <span th:text="${max}">...</span>
+        <p class="min-max-item">Min: </p>
+        <span class="min-max-item" th:text="${min}">...</span>
+        <p class="min-max-item">Max: </p>
+        <span class="min-max-item" th:text="${max}">...</span>
     </div>
-    <p><a href="/random">Generate again</a></p>
+    <p><a href="/random">Generate</a></p>
     <form method="post" action="/formulate">
         <label for="min">Minimum Number</label>
         <input type="number" id="min" name="min" value="0">
