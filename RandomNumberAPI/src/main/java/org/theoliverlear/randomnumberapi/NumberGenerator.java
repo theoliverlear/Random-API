@@ -3,9 +3,11 @@ package org.theoliverlear.randomnumberapi;
 import java.util.Random;
 
 public class NumberGenerator {
+    //------------------------------Variables---------------------------------
     private int randomNumber;
     private int min;
     private int max;
+    //------------------------------Constructor-------------------------------
     public NumberGenerator() {
         this.min = 0;
         this.max = 100;
