@@ -11,12 +11,26 @@
     be anything -- a base for a random number generator, testing, encryption,
     dummy data, or just for fun. The Random API a simple tool to help you
     build complex programs. -->
+    <!-- Perhaps use IMDB for large media database
+    * Number * Letter * Word * Sentence * Definition * Date * Time * Quote *
+    * Color * Image * Fact * President * Country * Historical Event * Animal *
+    * Food * Music * Movie * Book * Website * Company * Emoji * Emotion *
+    * Pokemon * Planet * Celebrity * City * Fruit * Vegetable * Car * Name *
+    * University * Hobby * Language * Sport * Job * Currency * Shape *
+    * Greeting * Periodic Element * Holiday * Programming Language * Tool *
+    -->
+    <!-- Priority:
+         1. Random Number Generator
+         2. Random Color Generator (Hex, RGB, HSL)
+         3. Random Word Generator (Exclude Profanity)
+    -->
+    <!-- TODO: Add radio button for integer or decimal -->
 </head>
 <body>
     <nav>
         <ul>
             <li>
-                <h4>Random Generator</h4>
+                <h4>Random Number Generator</h4>
             </li>
             <li>
                 <h4>API</h4>
@@ -27,17 +41,18 @@
         </ul>
     </nav>
     <section id="num-display-section">
-        <h1 class="num-display">Random Number</h1>
-        <p class="num-display">Random number is: <span id="gen-num" th:text="${number}">...</span></p>
+        <h1 id="api-title" class="num-display">Random Number Generator</h1>
+        <p class="num-display">Your random number is: </p>
+        <h1 id="gen-num" th:text="${number}">...</h1>
         <div class="num-display" id="copy-button"><h3>Copy to Clipboard</h3></div>
     </section>
-    <div id="min-max-section">
+    <div id="min-max-div">
         <p class="min-max-item">Min: </p>
         <span class="min-max-item" th:text="${min}">...</span>
         <p class="min-max-item">Max: </p>
         <span class="min-max-item" th:text="${max}">...</span>
     </div>
-    <p><a href="/random">Generate</a></p>
+    <p id="gen-button"><a href="/random">Generate</a></p>
     <form method="post" action="/formulate">
         <label for="min">Minimum Number</label>
         <input type="number" id="min" name="min" value="0">
