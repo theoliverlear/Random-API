@@ -1,0 +1,11 @@
+<div id="num-display-fragment" th:fragment="generatedNumberFragment">
+    <section id="num-display-section">
+        <h1  id="api-title" class="num-display">Random Number Generator</h1>
+        <p   class="num-display">Your random number is: </p>
+        <h1  id="gen-num" th:text="${number}">...</h1>
+        <h1 class="button" id="gen-button">Generate</h1>
+        <div class="num-display button" id="copy-button">
+            <h3>Copy to Clipboard</h3>
+        </div>
+    </section>
+</div>
