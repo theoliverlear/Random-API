@@ -39,14 +39,21 @@
     <span id="decimal" class="toggle-item">Decimal</span>
 </div>
 <!-------------------------------Form-Section-------------------------------->
-<form method="post" action="/formulate">
-    <label for="min">Minimum Number</label>
-    <input type="number" id="min" name="min" value="0">
-    <label for="max">Maximum Number</label>
-    <input type="number" id="max" name="max" value="100">
-    <input type="text" id="type" name="type" th:value="${numFormat}">
-    <input class="button" type="submit" value="Set Range">
-</form>
+<div id="number-range-div">
+    <div class="num-range-item">
+        <label for="min">Minimum Number</label>
+        <input type="number" id="min" name="min" value="0">
+    </div>
+    <div class="num-range-item">
+        <label for="max">Maximum Number</label>
+        <input type="number" id="max" name="max" value="100">
+    </div>
+    <div class="num-range-item">
+        <div id="set-range-button-div">
+            <h4 id="set-range-button-text">Set Range</h4>
+        </div>
+    </div>
+</div>
 <script src="../static/script.js" th:src="@{/script.js}" defer></script>
 <script src="../static/requestScript.js" th:src="@{/requestScript.js}" defer></script>
 </body>
