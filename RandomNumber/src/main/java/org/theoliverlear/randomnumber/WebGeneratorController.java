@@ -76,4 +76,5 @@ public class WebGeneratorController {
         mixMaxHeader.addAttribute("max", this.intNumGen.getMax());
         return "index";
     }
+
 }
