@@ -9,3 +9,13 @@ async function copyToClipboard() {
     });
 }
 copyButton.addEventListener('click', copyToClipboard);
+
+//----------------------------Save-Color-Function-----------------------------
+const saveButton = document.getElementById('save-color-button');
+let currentColor = document.getElementById('current-color-text');
+function saveColorInApi() {
+    const request = new XMLHttpRequest();
+    request.open("POST", `/save/${currentColor.textContent}`, true);
+    request.send();
+}
+saveButton.addEventListener('click', saveColorInApi);

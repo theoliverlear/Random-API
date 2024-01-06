@@ -28,7 +28,15 @@
 </head>
 <body>
 <div th:style="${bodyStyle}">
-    <h1 th:text="${colorCode}">...</h1>
+    <h1 id="current-color-text" th:text="${colorCode}">...</h1>
 </div>
+<div>
+    <button id="save-color-button">Save Color</button>
+    <h1>Saved:</h1>
+    <div id="saved-colors-div">
+        <p id="saved-colors" th:text="${savedColors}">...</p>
+    </div>
+</div>
+<script src="../static/script.js" th:src="@{/script.js}" defer></script>
 </body>
 </html>
